@@ -4,7 +4,11 @@
 */
 
 function isPalindrome(str) {
-  let string1=str.toLowerCase();
+  let string1=str.toLowerCase().replace(/[^a-z0-9]/g,""); //here g flag means it will replace all the occurences in the string.
+  let string2=string1.split("").reverse().join("");
+  if(string1!==string2){
+    return false;
+  }
   
   return true;
 }
